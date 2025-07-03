@@ -6,7 +6,7 @@ def new_acc():
     balance = 0
     user_data = [acc_no, name, mob, pin, balance]
     
-    with open("C://Users//ishan//OneDrive//Desktop//upflair//projects//account.txt", "a") as file:
+    with open("account.txt", "a") as file:
         file.write(str(user_data) + "\n")  # List ko string me convert karke save kiya
     
     print("Account Created Successfully!")
@@ -17,7 +17,7 @@ def view_acc():
     pin_input = input("Enter your 4 digit pin : ").strip()
     found = False
 
-    with open("C://Users//ishan//OneDrive//Desktop//upflair//projects//account.txt", "r") as file:
+    with open("account.txt", "r") as file:
         for line in file:
             line = line.strip().replace('[','').replace(']','')
             parts = line.split(',')
@@ -47,7 +47,7 @@ def deposit():
     found = False
     updated_lines = []
 
-    with open("C://Users//ishan//OneDrive//Desktop//upflair//projects//account.txt", "r") as file:
+    with open("account.txt", "r") as file:
         for line in file:
             line = line.strip().replace('[','').replace(']','')
             parts = line.split(',')
@@ -71,7 +71,7 @@ def deposit():
             updated_lines.append(new_data)
     if found:
         # Overwrite entire file with updated data
-        with open("C://Users//ishan//OneDrive//Desktop//upflair//projects//account.txt", "w") as file:
+        with open("account.txt", "w") as file:
             for line in updated_lines:
                 file.write(line + "\n")
     else:
@@ -82,7 +82,7 @@ def withdraw():
     found = False
     updated_lines = []
 
-    with open("C://Users//ishan//OneDrive//Desktop//upflair//projects//account.txt", "r") as file:
+    with open("C:account.txt", "r") as file:
         for line in file:
             line = line.strip().replace('[','').replace(']','')
             parts = line.split(',')
@@ -113,14 +113,14 @@ def withdraw():
             updated_lines.append(new_data)
     if found:
         # Overwrite entire file with updated data
-        with open("C://Users//ishan//OneDrive//Desktop//upflair//projects//account.txt", "w") as file:
+        with open("account.txt", "w") as file:
             for line in updated_lines:
                 file.write(line + "\n")
     else:
         print("Invalid Account Number Or PIN")
 def acc_no_gen():
     try:
-        with open("C://Users//ishan//OneDrive//Desktop//upflair//projects//account.txt", "r") as file:
+        with open("account.txt", "r") as file:
             lines = file.readlines()
             if not lines:
                 return "1001"  # First account
