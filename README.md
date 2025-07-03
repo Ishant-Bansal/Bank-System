@@ -38,7 +38,7 @@ python bank_system.py
 ## 📌 Example Flow
 
 ```text
---------ATM INTERFACE--------
+--------BANK SYSTEM--------
 Open New Account press 1 :
 View Account Detail press 2 :
 Deposit money press 3 :
@@ -70,6 +70,4 @@ Enter your choice (1 to 4) :
 - **Ishant Bansal**  
 Feel free to connect or suggest improvements.
 
-## 📜 License
 
-This project is licensed under the MIT License.
